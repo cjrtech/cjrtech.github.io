@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cedric Rivera Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Portfolio">
+    <meta name="author" content="Ashton Donaghy">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/kube.min.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/custom.min.css" />
+    <link rel="shortcut icon" href="../img/logo.png" />
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC:700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+	<style>
+		.intro h1:before {
+			content: 'cedric';
+		}
+	</style>
+</head>
+<body>
+
+	<div class="main-nav">
+		<div class="container">
+			<header class="group top-nav">
+				<div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1">
+				    <span class="logo">Menu</span>
+				</div>
+			    <nav id="navbar-1" class="navbar item-nav">
+				    <ul>
+				        <li class="active"><a href="../index.html">Home</a></li>
+				        <li><a href="./my_resume.html">Resume</a></li>
+				        <li><a href="./my_fun_facts.html">Fun Facts</a></li>
+				        <li><a href="./blog.html">Blog</a></li>
+				    </ul>
+				</nav>
+			</header>
+		</div>
+	</div>
+
+	<div class="work section second" id="experiences">
+		<div class="container">
+			<h1>My First Blog</h1>
+			<ul class="work-list">
+				<li><a>Good Will Hunting - 1997</a></li>
+				<li><img src="..\img\Goodwillhunting.jpg" width="200"alt="Good Will Hunting Movie Cover" title="Good Will Hunting"></li>
+				<li> This is one of my favorite movies because its about a janitor that is a very strong mathmatician
+					and proves it by solving a very difficult problem in the hallway of MIT while he was doing his normal cleaning.
+					It also has Robin Willams and Matt Damon, would highly recommend it to anyone who hasnt seen it already!
+				</li>
+			</ul>
+		</div>
+	</div>
+
+    <section id="app">
+		<div class="container">
+		  <div class="row">
+			<div class="col-6">
+			  <div class="comment">
+			<p v-for="items in item" v-text="items"></p>
+			  </div><!--End Comment-->
+			  </div><!--End col -->
+			  </div><!-- End row -->
+		  <div class="row">
+			<div class="col-6">
+		  <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+			  <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+			</div><!-- End col -->
+		  </div><!--End Row -->
+		</div><!--End Container -->
+	  </section><!-- end App -->
+
+	  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+</body>
+</html>
