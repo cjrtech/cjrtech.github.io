@@ -16,6 +16,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/smoothscroll-behavior-polyfill@1.2.0/dist/smoothscroll-behavior.min.js"></script>
 </head>
 <body>
+	<div class="custom-cursor"></div>
 	<div class="main-nav">
 		<div class="container">
 			<header class="group top-nav">
@@ -24,7 +25,7 @@
 				</div>
 			    <nav id="navbar-1" class="navbar item-nav">
 				    <ul>
-				        <li class="active"><a href="index.html">Home</a></li>
+				        <li><a href="#home">Home</a></li>
 				        <li><a href="#about">About</a></li>
 						<li><a href="#experiences">Resume</a></li>
 				        <li><a href="#skills">Skills</a></li>
@@ -48,9 +49,9 @@
 					<h1>I am<br><span id="typed"></span></h1>
 				</div>
 				<p>
-					I'm a senior studying Information Technology at Oakland University. 
+					I'm a graduate of Oakland University with a BSE in Information Technology. 
 					This website is a resource for you to learn a little bit more about me as well as show you some of my skills put into play. 
-					I am pursuing a prioritization in Software Development or Cyber Security!
+					I am pursuing a prioritization in Software Development!
 				</p>
 			</div>
 		</div>
@@ -62,11 +63,20 @@
     <div class="container">
         <h1>Work Experiences</h1>
         <ul class="work-list">
-            <li>May 2018 - August 2020</li>
             <li><a>Life Guard / Part time Manager, Forest Hills Swim Club</a></li>
+			<li>May 2018 - August 2020</li>
             <li>During my time with FHSC I oversaw the pool as a life guard and worked as
-                a part time manager when we needed someone with experience to help manage during busier days.
-            </li>
+                a part time manager when we needed someone with experience to help manage during busier days.</li>
+        </ul>
+		<ul class="work-list">
+            <li><a>Line Cook, Panera Bread</a></li>
+			<li>Feb 2017 - March 2018</li>
+            <li>Prepared sandwiches for customers to their customized liking.</li>
+        </ul>
+		<ul class="work-list">
+            <li><a>Sales Associate, Levi Jeans</a></li>
+			<li>Sep 2016 - Jan 20217</li>
+            <li>Sold jeans and asked customers what they were looking for and matched them with their correspoding jeans.</li>
         </ul>
     </div>
 	<hr />
@@ -78,7 +88,7 @@
         <h1>Education</h1>
         <ul class="award-list list-flat">
             <li>Aug 2018 - December 2023</li>
-            <li>Information Technology, Oakland University</li>
+            <li>BS in Information Technology, Oakland University</li>
            <!-- <li>Relevant Courses:</li> -->
         </ul>
         <ul class="award-list list-flat">
@@ -99,58 +109,74 @@
         </ul>
         <ul class="skill-list list-flat">
             <li>Applications</li>
-            <li>Power Point / Excel / Microsoft Word/Google Docs / Wireshark / Trello / IntelliJ / CLI MacOS / Agile/Scrum / Outlook / GCP / Remote Desktop / Ubuntu / Linux / BASH</li>
+            <li> BASH / Git / Excel / Wireshark / Trello / IntelliJ / CLI MacOS / Agile/Scrum / GCP / Remote Desktop / Ubuntu / Linux</li>
         </ul>
     </div>
-	<hr />
+</div>
+<hr />
 </div>
 <div class="skills section second" id="skill">
 	<div class="container">
 		<h1>Projects</h1>
 		<ul class="skill-list list-flat">
-			<li p style="font-size: 30px;"><a>Calendar Application</a></li>
-				<li><img src="img\agendaassasin.jpg" width="600"alt="Agenda Assasin" title="Agenda Assasin"></li>
-				<li>Created a calendar application from scratch to help elementary and middle school students stay on track with their assignments!</li>
-				<li>My resbonsibilites being:</li>
-				<li>• Created the entire UI for the calendar application and its features</li>
-				<li>• Created the calculator feature from scratch as well as the UI for it</li>
-				<li>• Helped create backend security as well as an administrative roll (teacher)</li>
-				<li>• Was named the - UX designer, UI designer, Calculator creator, Trello Master</li>
+			<li p style="font-size: 30px;"><a>Click Search Extension</a></li>
+			<li><video src="video\ExenstionDemo.mp4" controls width="100%">
+			<li>Developed browser extension utilizing AI technology to dynamically curate and display relevant information
+				about YouTube videos, enhancing user experience and accessibility</li>
+			<li>Project can be found <a href="https://github.com/cjrtech/ClickSearch">here</a></li>
+			<li>Languages Used: React, HTML, CSS, Javascript</li>
 		</ul>
 	</div>
 </div>
-
+<hr />
 <div class="skills section second" id="skill">
 	<div class="container">
-		<h1>Projects</h1>
+		<ul class="skill-list list-flat">
+			<li p style="font-size: 30px;"><a>Calendar Application</a></li>
+			<li><img src="img\agendaassasin.jpg" width="600" alt="Agenda Assassin" title="Agenda Assassin"></li>
+			<li>Created a calendar application from scratch to help elementary and middle school students stay on track with their assignments!</li>
+			<li>Project can be found <a href="https://github.com/cjrtech/AgendaAssassin">here</a></li>
+			<li>Languages Used: Java, Swing, XML, Javascript</li>
+		</ul>
+	</div>
+</div>
+<hr />
+<div class="skills section second" id="skill">
+	<div class="container">
 		<ul class="skill-list list-flat">
 			<li p style="font-size: 30px;"><a>Electronic Medical Record System</a></li>
 				<li><img src="img\EMR.JPG" width="600"alt="EMR" title="EMR"></li>
 				<li>Created a website that patients and doctors can use for various reasons such as making appointments and adding prescriptions.</li>
-				<li>My resbonsibilites being:</li>
-				<li>• Created the architecture of the application using XAMPP as an apache host</li>
-				<li>• Created the database using SQL and XAMPP as an SQL host</li>
-				<li>• Integrated the database to add new information and save it to the database using information entered by the user in HTML forms</li>
-				<li>• Was named the - Systems Analyst/Software Engineer, Back End and Overall Architecture</li>
+				<li>Project can be found <a href="https://github.com/cjrtech/EMRSys">here</a></li>
+				<li>Languages Used: PHP, HTML, MySQL, CSS, Javascript</li>
 		</ul>
 	</div>
 </div>
-
+<hr />
+<div class="skills section second" id="skill">
+	<div class="container">
+		<ul class="skill-list list-flat">
+			<li p style="font-size: 30px;"><a>Body Builder Comparison</a></li>
+				<li><img src="img\bestbodybuilder.JPG" width="600"alt="EMR" title="EMR"></li>
+				<li>This project was one I did completely on my own just for the sheer love of body building. I have always wanted to look at side by
+					side pictures of all the mr olympia winners from all years. This website will be a work in progress and has lots of updates to come!
+				</li>
+				<li>Project can be found <a href="https://cjrtech.github.io/bodybuildercomparison/index.html">here</a></li>
+				<li>Languages Used: HTML, CSS, Javascript</li>
+		</ul>
+	</div>
+</div>
+<hr />
 <div class="skills section second" id="skill">
 	<div class="container">
 		<ul class="skill-list list-flat">
 			<li p style="font-size: 30px;"><a>Apache Server Hardening</a></li>
 			<li><img src="img\serverhardening.jpg" width="600"alt="Server Hardening" title="Server Hardening"></li>
 			<li>Created an Apache server out of Raspberry Pi with security measures.</li>
-			<li>My resbonsibilites being:</li>
-			<li>• Created an Apache server out of a Raspberry Pi</li>
-			<li>• Uploaded some files for basic website content as filler</li>
-			<li>• Implemented security measures to protect against the most well-known security vulnerabilities</li>
-			<li>• Implemented basic network security</li>
 		</ul>
 	</div>
-	<hr />
 </div>
+<hr />
 
 <div class="skills section second" id="skill">
 	<div class="container">
@@ -161,8 +187,9 @@
 			</li>
 		</ul>
 	</div>
-	<hr />
 </div>
+<hr />
+
 <div class="work section second" id="funfacts">
 	<div class="container">
 		<h1>Fun Facts!</h1>
@@ -190,6 +217,7 @@
 			</video><a href="https://www.youtube.com/watch?v=zSWdZVtXT7E&t=1s&ab_channel=WarnerBros.UK%26Ireland">
 				Go check it out for yourself if you havent already!</a></li>
 		</ul>
+		<hr />
 	</div>
 </div>
 
