@@ -1,13 +1,276 @@
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display SC", serif;
-    color: #333;
+    font-family: "Roboto", ans-serif;
+    color: #646464;
+    text-decoration: underline;
 }
 
 a, li, p {
-    font-family: Lato, Arial, sans-serif;
-    color: #4e4e4e;
+    font-family: Roboto, Arial, sans-serif;
+    color: #8c8c8c;
     font-size: 1em;
     line-height: 1.75em;
+}
+.underlined {
+    text-decoration: underline;
+}
+
+.main-nav {
+    position: fixed;
+    top: 50%; /* Move the header to the vertical center */
+    transform: translateY(-50%);
+    left: 0;
+    width: 220px; /* Set the width of your fixed header */
+    background-color: #fff; /* Set background color */
+    background: var(--gray-70);
+    z-index: 1000; /* Ensure the header stays above other content */
+    overflow-y: hidden; /* Enable vertical scrolling if content overflows */
+    overflow-x: hidden;
+    transition: background-color var(--animate) ease-in-out;
+}
+body.dark .main-nav {
+    background-color: var(--gray-35); /* Change background color in dark mode */
+}
+
+.container {
+    width: 100%; /* Ensure full width */
+}
+
+.top-nav {
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.navigation-toggle {
+    display: none; /* Optional: hide the navigation toggle button */
+}
+
+.logo {
+    font-size: 24px; /* Optional: adjust font size of the logo */
+}
+
+.item-nav ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Make the list items flex container */
+    flex-direction: column; /* Stack list items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.item-nav ul li {
+    margin-bottom: 5px; /* Adjust spacing between menu items */
+    width: 100%; /* Ensure full width of list items */
+}
+
+.item-nav ul li a {
+    display: block; /* Make menu items block-level */
+    text-decoration: none; /* Remove default underline */
+    color: #646464; /* Set text color */
+    padding: 10px; /* Add padding to each item */
+    text-align: center; /* Center text horizontally */
+}
+
+.item-nav ul li a:hover {
+    color: #8c8c8c; /* Change text color on hover */
+    text-shadow: 0 0 2px rgba(32, 31, 31, 0.5); /* Add shadow-like outline around the text */
+    transition: text-shadow 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Additional styling for the mode toggle */
+.mode-toggle {
+    /* Add your styles for the mode toggle */
+}
+
+:root {
+	--gray-5:#010101; /*dark*/
+	--gray-10:#040404;
+	--gray-15:#070808;
+	--gray-20:#0D0D0E;
+	--gray-25:#141516;
+	--gray-30:#1E2022;
+	--gray-35:#2D2F31;
+	--gray-40:#404346;
+	--gray-45:#5B5E62;
+	--gray-50:#7C8084;
+	--gray-55:#9DA1A5;
+	--gray-60:#B9BDC1;
+	--gray-65:#CDD1D5;
+	--gray-70:#DCE0E3;
+	--gray-75:#E7EAED;
+	--gray-80:#EFF2F5;
+	--gray-85:#F4F7FA;
+	--gray-90:#F7FAFD;
+	--gray-95:#FCFEFE; /*light*/
+	--animate:200ms;
+}
+body {
+	margin:0;
+	color:var(--gray-40);
+	font-family:"Arial";
+	background:var(--gray-70);
+	-webkit-font-smoothing:antialiased;
+	transition:color var(--animate) ease-in-out, background var(--animate) ease-in-out;
+}
+body.dark {
+	color:var(--gray-80);
+	background:var(--gray-35);
+}
+h6 {
+	color:var(--gray-40);
+	transition:color var(--animate) ease-in-out;
+}
+body.dark h6 {
+	color:var(--gray-80);
+}
+.load-flash {
+	z-index:1000;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	background:var(--gray-35);
+}
+.mode-toggle {
+	display:inline-flex;
+	flex-direction:row;
+	align-items:center;
+}
+.label-dark {
+	letter-spacing:-0.15px;
+}
+.label-light {
+	letter-spacing:-0.031px;
+}
+.mode-toggle h6,
+body.dark .mode-toggle h6 {
+	text-transform:uppercase;
+}
+.label-dark,
+.label-light {
+	padding:8px 12px;
+	min-width:32px;
+	text-align:center;
+	color:var(--gray-45);
+}
+body.dark .label-dark,
+body.dark .label-light {
+	color:var(--gray-60);
+}
+.label-dark:hover {
+	color:var(--gray-40);
+}
+.label-dark:active {
+	color:var(--gray-5);
+}
+body.dark .label-dark {
+	pointer-events:none;
+}
+body.dark .label-light:hover {
+	color:var(--gray-95);
+}
+body.dark .label-light:active {
+	color:var(--gray-65);
+}
+.toggle-switch {
+	margin:0;
+	padding:0;
+	width:48px;
+	height:28px;
+	border:none;
+	outline:none;
+	overflow:hidden;
+	position:relative;
+	border-radius:14px;
+	display:inline-block;
+	background:var(--gray-40);
+}
+body.dark .toggle-switch {
+	width:48px;
+}
+.toggle-switch,
+.toggle-switch:before,
+.toggle-switch:after {
+	transition:all var(--animate) ease-in-out;
+}
+body.dark .toggle-switch {
+	background:var(--gray-70);
+}
+.toggle-switch:before {
+	top:4px;
+	left:24px;
+	content:"";
+	width:20px;
+	height:20px;
+	display:block;
+	position:absolute;
+	border-radius:12px;
+	background:var(--gray-70);
+}
+body.dark .toggle-switch:before {
+	left:4px;
+	background:var(--gray-35);
+}
+.toggle-switch:after {
+	content:"";
+	top:14px;
+	right:2px;
+	width:1px;
+	height:1px;
+	display:block;
+	position:absolute;
+	border-radius:0.5px;
+	background:var(--gray-40);
+}
+body.dark .toggle-switch:after {
+	top:-2px;
+	right:2px;
+	width:32px;
+	height:32px;
+	border-radius:16px;
+	background:var(--gray-70);
+}
+.toggle-switch:hover,
+.toggle-switch:hover:after {
+	background:var(--gray-35);
+}
+.toggle-switch:focus,
+.toggle-switch:active,
+.toggle-switch:active:after {
+	background:var(--gray-25);
+}
+body.dark .toggle-switch:hover,
+body.dark .toggle-switch:hover:after {
+	background:var(--gray-95);
+}
+body.dark .toggle-switch:focus,
+body.dark .toggle-switch:active,
+body.dark .toggle-switch:active:after {
+	background:var(--gray-65);
+}
+.noselect {
+	user-select:none;
+	-ms-user-select:none;
+	-moz-user-select:none;
+	-webkit-user-select:none;
+}
+.disableEasingTemporarily,
+.disableEasingTemporarily:after,
+.disableEasingTemporarily:before {
+  -o-transition-property:none!important;
+  -moz-transition-property:none!important;
+  -ms-transition-property:none!important;
+  -webkit-transition-property:none!important;
+  transition-property:none!important;
+  -o-transform:none!important;
+  -moz-transform:none!important;
+  -ms-transform:none!important;
+  -webkit-transform:none!important;
+  transform:none!important;
+  -webkit-animation:none!important;
+  -moz-animation:none!important;
+  -o-animation:none!important;
+  -ms-animation:none!important;
+  animation:none!important;
 }
 
 a:hover {
@@ -25,6 +288,7 @@ a:hover {
     max-width: 662px;
     padding: 0 20px;
 }
+
 
 @media only screen and (max-width: 767px) {
     .intro img {
@@ -85,19 +349,6 @@ a:hover {
     }
 }
 
-.main-nav {
-    background: #f4f4f4;
-    padding-top: 23px;
-}
-
-.main-nav nav ul li a {
-    color: #a7a7a7;
-}
-
-.main-nav nav ul li.active a {
-    color: #4d4d4d;
-}
-
 .section.second {
     margin-bottom: 90px;
 }
@@ -106,11 +357,6 @@ a:hover {
     position: relative;
 }
 
-.section .container:after {
-    position: absolute;
-    content: url(https://cjrtech.github.io/img/separator.png);
-    left: 20px;
-}
 
 .section .container h1 {
     text-transform: uppercase;
@@ -199,6 +445,9 @@ a:hover {
     color: #fff;
 }
 
+
+
 footer {
     padding: 50px 0 0 0;
 }
+
